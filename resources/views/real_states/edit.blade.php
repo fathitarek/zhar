@@ -36,8 +36,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/home">إضافة عقار جديد</a></li> 
-                <li class="nav-item"><a class="nav-link" href="/search">بحث عن عقار</a></li>
+@if(Auth::user()->type==1)
+                                <li class="nav-item"><a class="nav-link" href="/home">  إضافة عقار جديد</a></li> 
+                                @endif                <li class="nav-item"><a class="nav-link" href="/search">بحث عن عقار</a></li>
                 <li class="nav-item"><a class="nav-link" href="/today">العقارات المضافة اليوم</a></li>
                                 
                                 <!-- show this li when admin login only -->
@@ -273,7 +274,7 @@
                                     
                                     <div class="input-group-icon mt-10">
                     <div class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-                    <input type="date" name="date"  value="{{ $realState->date }}"  placeholder="تاريخ إنتهاء الحالة" onfocus="this.placeholder = ''" onblur="this.placeholder = 'تاريخ إنتهاء الحالة'" class="single-input" required>
+                    <input type="date" name="date" onvalue="{{ $realState->date }}"  value="{{ $realState->date }}"  placeholder="تاريخ إنتهاء الحالة" onfocus="this.placeholder = ''" onblur="this.placeholder = 'تاريخ إنتهاء الحالة'" class="single-input" required>
                   </div>
                                     
                                     <div class="mt-10">

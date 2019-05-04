@@ -11,6 +11,8 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use App\Models\realState;
+use Auth;
+
 class realStateController extends AppBaseController
 {
     /** @var  realStateRepository */
@@ -31,6 +33,9 @@ class realStateController extends AppBaseController
      */
     public function index(Request $request)
     {
+         if(Auth()->user()->type==0){
+            return redirect('/search');
+        }
         $this->realStateRepository->pushCriteria(new RequestCriteria($request));
         $realStates = $this->realStateRepository->all();
         // $realStates=realState::latest()->get();
@@ -41,7 +46,12 @@ class realStateController extends AppBaseController
 
 public function getToday(){
 // return date("Y-m-d");
-    $realStates=realState::latest()->where('created_at',date("Y-m-d"))->get();
+        $not_av=realState::latest()->where('state','2')->where('date',date("Y-m-d"))->get();
+foreach ($not_av as $value)  {
+    realState::where('id',$value->id)->update(['state'=>'1','created_at'=>date("Y-m-d"),'updated_at'=>date("Y-m-d")]);
+
+}
+    $realStates=realState::latest()->where('state','1')->where('created_at',date("Y-m-d"))->get();
     // return $realStates;
      return view('real_states.today')
             ->with('realStates', $realStates);
@@ -153,6 +163,9 @@ public function search(){
      */
     public function edit($id)
     {
+            if(Auth()->user()->type==0){
+            return redirect('/search');
+        }
         $realState = $this->realStateRepository->findWithoutFail($id);
 
         if (empty($realState)) {
