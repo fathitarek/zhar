@@ -47,7 +47,8 @@ class realState extends Model
         'price',
         'state',
         'date',
-        'note'
+        'note',
+        'area'
     ];
 
     /**
@@ -68,7 +69,8 @@ class realState extends Model
         'price' => 'string',
         'state' => 'string',
         'date' => 'date',
-        'note' => 'string'
+        'note' => 'string',
+         'area'=>'integer'
     ];
 
     /**
@@ -88,7 +90,8 @@ class realState extends Model
         'mobile' => 'required',
         'price' => 'required',
         'state' => 'required',
-        'date' => 'required'
+        'date' => 'required',
+         'area'=>'required'
     ];
 
     

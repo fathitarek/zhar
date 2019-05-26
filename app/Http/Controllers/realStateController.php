@@ -59,12 +59,20 @@ foreach ($not_av as $value)  {
 
 
 public function search(){
+    // return 'f';
 
      $realStates=realState::latest();
-   
+   if (isset($_GET['from_area'])!=null&&$_GET['from_area']!='') {
+        $realStates =$realStates->where('area','>=',$_GET['from_area']);
+        // return "ff";
+    }
+    if (isset($_GET['to_area'])!=null&&$_GET['to_area']!='') {
+        $realStates =$realStates->where('area','<=',$_GET['to_area']);
+    }
+
     if (isset($_GET['from_price'])!=null&&$_GET['from_price']!='') {
         $realStates =$realStates->where('price','>=',$_GET['from_price']);
-        return "ff";
+        //return "ff";
     }
     if (isset($_GET['to_price'])!=null&&$_GET['to_price']!='') {
         $realStates =$realStates->where('price','<=',$_GET['to_price']);

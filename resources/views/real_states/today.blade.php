@@ -114,7 +114,7 @@
                                             <td>{!! $realState->group !!}</td>
                                             <td>{!! $realState->building !!}</td>
                                             <td>{!! $realState->flat !!}</td>
-                                            <td>220</td>
+                                            <td>{!! $realState->area !!}</td>
                                             <td>{!! $realState->price !!}</td>
                                             <td><a href="{!! route('realStates.show', [$realState->id]) !!}" class="genric-btn primary small">التفاصيل</a></td>
                                         </tr>

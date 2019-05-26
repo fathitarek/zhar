@@ -114,7 +114,7 @@
                                             <td>{!! $realState->group !!}</td>
                                             <td>{!! $realState->building !!}</td>
                                             <td>{!! $realState->flat !!}</td>
-                                            <td>220</td>
+                                            <td>{!! $realState->area !!}</td>
                                             <td>{!! $realState->price !!}</td>
                                             <td><a href="{!! route('realStates.show', [$realState->id]) !!}" class="genric-btn primary small">التفاصيل</a></td>
                                         </tr>
@@ -135,7 +135,7 @@
                    <div class="section-top-border">
 						<div class="row">
 							<div class="col-lg-12 col-md-12 searchh">
-								{!! Form::open(['url' => 'realStates/search','method'=>'get']) !!}
+								{!! Form::open(['url' => '/search','method'=>'get']) !!}
                                     
                                     <div class="mt-10 title-s">العنوان</div>
                                     <div class="input-group-icon mt-10">
@@ -228,6 +228,21 @@
 										<div class="icon"><i class="fa fa-money" aria-hidden="true"></i></div>
 										<input type="text" name="to_price" placeholder="السعر إلى" onfocus="this.placeholder = ''" onblur="this.placeholder = 'السعر إلى'"  class="single-input">
 									</div>
+									
+									
+									<div class="mt-10 title-s">المساحه</div>
+                                    <div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-square" aria-hidden="true"></i></div>
+										<input type="text" name="from_area" placeholder=" المساحه من" onfocus="this.placeholder = ''" onblur="this.placeholder = 'المساحه من'" class="single-input">
+									</div>
+                                    
+                                    <div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-square" aria-hidden="true"></i></div>
+										<input type="text" name="to_area" placeholder="المساحه الى" onfocus="this.placeholder = ''" onblur="this.placeholder = 'المساحه الى'"  class="single-input">
+									</div>
+									
+									
+									
 									
                                     <div class="mt-10">
                                         <input class="submit_btn single-input-secondary" type="submit" value="بحث">

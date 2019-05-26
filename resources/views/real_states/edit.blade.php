@@ -254,8 +254,15 @@
                     <div class="icon"><i class="fa fa-money" aria-hidden="true"></i></div>
                     <input type="text" name="price" value="{{$realState->price}}" placeholder="السعر" onfocus="this.placeholder = ''" onblur="this.placeholder = 'السعر'" class="single-input" required>
                   </div>
+				  <div class="mt-10 title-s">المساحه</div>
+                                    <div class="input-group-icon mt-10">
+                    <div class="icon"><i class="fa fa-square" aria-hidden="true"></i></div>
+                    <input type="text" name="area" value="{{$realState->area}}" placeholder="المساحه" onfocus="this.placeholder = ''" onblur="this.placeholder = 'المساحه'" class="single-input" required>
+                  </div>
+				  
                                     
                                     <div class="mt-10 title-s">أخرى</div>
+									 
                                      <div class="input-group-icon mt-10">
                     <div class="icon"><i class="fa fa-check" aria-hidden="true"></i></div>
                     <div class="form-select" id="default-select">

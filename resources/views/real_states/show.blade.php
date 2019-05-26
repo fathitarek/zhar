@@ -171,6 +171,10 @@
                                             <td> {!! $realState->price !!}</td>
                                             <th>السعر</th>
                                         </tr>
+										<tr>
+                                            <td>{!! $realState->area !!}</td>
+                                            <th>المساحه</th>
+                                        </tr>
                                         <tr>
                                             <td>{!! $realState->note !!}</td>
                                             <th>ملاحظات</th>

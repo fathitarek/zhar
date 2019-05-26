@@ -115,7 +115,7 @@
                                             <td>{!! $realState->group !!}</td>
                                             <td>{!! $realState->building !!}</td>
                                             <td>{!! $realState->flat !!}</td>
-                                            <td>220</td>
+                                            <td>{!! $realState->area !!}</td>
                                             <td>{!! $realState->price !!}</td>
                                             <td><a href="{!! route('realStates.edit', [$realState->id]) !!}" class="genric-btn primary small">تعديل</a></td>
                                         </tr>
@@ -225,7 +225,12 @@
 										<div class="icon"><i class="fa fa-money" aria-hidden="true"></i></div>
 										<input type="text" name="price" placeholder="السعر" onfocus="this.placeholder = ''" onblur="this.placeholder = 'السعر'" class="single-input" required>
 									</div>
-                                    
+<div class="mt-10 title-s">المساحه</div>
+                                    <div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-square" aria-hidden="true"></i></div>
+										<input type="text" name="area" placeholder="المساحه" onfocus="this.placeholder = ''" onblur="this.placeholder = 'المساحه'" class="single-input" required>
+									</div>                                   
+								   
                                     <div class="mt-10 title-s">أخرى</div>
                                      <div class="input-group-icon mt-10">
 										<div class="icon"><i class="fa fa-check" aria-hidden="true"></i></div>
