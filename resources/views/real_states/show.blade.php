@@ -36,10 +36,10 @@
                         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                             <ul class="nav navbar-nav menu_nav ml-auto">
                                 @if(Auth::user()->type==1)
-                                <li class="nav-item"><a class="nav-link" href="/home">  إضافة عقار جديد</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">  إضافة عقار جديد</a></li> 
                                 @endif
-                                                            <li class="nav-item"><a class="nav-link" href="/search">بحث عن عقار</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/today">العقارات المضافة اليوم</a></li>
+                                                            <li class="nav-item"><a class="nav-link" href="{{ url('search') }}">بحث عن عقار</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url('today') }}">العقارات المضافة اليوم</a></li>
 
                                 
                                 <!-- show this li when admin login only -->

@@ -73,7 +73,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-نظام عقارات الزهارS                </div>
+نظام عقارات الزهار                </div>
 
                 <div class="links">
                     <a href="{{ url('/login') }}">Go To System</a>
