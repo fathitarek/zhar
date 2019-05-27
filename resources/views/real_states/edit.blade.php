@@ -8,16 +8,17 @@
         <link rel="icon" href="../../img/favicon.png" type="image/png">
         <title>تعديل عقار | نظام عقارات الزهار</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../../css/bootstrap.css">
-        <link rel="stylesheet" href="../../vendors/linericon/style.css">
-        <link rel="stylesheet" href="../../css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="../../vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="../../vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="../../vendors/animate-css/animate.css">
+  
+        <link rel="stylesheet" href="{{url('css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{url('vendors/linericon/style.css')}}">
+        <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{url('vendors/owl-carousel/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{url('vendors/lightbox/simpleLightbox.css')}}">
+        <link rel="stylesheet" href="{{url('vendors/nice-select/css/nice-select.css')}}">
+        <link rel="stylesheet" href="{{url('vendors/animate-css/animate.css')}}">
         <!-- main css -->
-        <link rel="stylesheet" href="../../css/style.css">
-        <link rel="stylesheet" href="../../css/responsive.css">
+        <link rel="stylesheet" href="{{url('css/style.css')}}">
+        <link rel="stylesheet" href="{{url('css/responsive.css')}}">
     </head>
     <body>
         
@@ -308,18 +309,20 @@
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="../../js/jquery-3.2.1.min.js"></script>
-        <script src="../../js/popper.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/stellar.js"></script>
-        <script src="../../vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="../../vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="../../vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="../../vendors/isotope/isotope-min.js"></script>
-        <script src="../../vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../../vendors/jquery-ui/jquery-ui.js"></script>
-        <script src="../../js/jquery.ajaxchimp.min.js"></script>
-        <script src="../../js/mail-script.js"></script>
-        <script src="../../js/theme.js"></script>
+
+
+         <script src="{{url('js/jquery-3.2.1.min.js')}}"></script>
+        <script src="{{url('js/popper.js')}}"></script>
+        <script src="{{url('js/bootstrap.min.js')}}"></script>
+        <script src="{{url('js/stellar.js')}}"></script>
+        <script src="{{url('vendors/lightbox/simpleLightbox.min.js')}}"></script>
+        <script src="{{url('vendors/nice-select/js/jquery.nice-select.min.js')}}"></script>
+        <script src="{{url('vendors/isotope/imagesloaded.pkgd.min.js')}}"></script>
+        <script src="{{url('vendors/isotope/isotope-min.js')}}"></script>
+        <script src="{{url('vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+        <script src="{{url('vendors/jquery-ui/jquery-ui.js')}}"></script>
+        <script src="{{url('js/jquery.ajaxchimp.min.js')}}"></script>
+        <script src="{{url('js/mail-script.js')}}"></script>
+        <script src="{{url('js/theme.js')}}"></script>
     </body>
 </html>
